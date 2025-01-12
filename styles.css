@@ -1,0 +1,151 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+/* Container and Task Manager Card Styles */
+.container, .task-manager {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    text-align: center;
+}
+
+/* Input Fields */
+input[type="text"], input[type="email"], input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Placeholder Styles */
+input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Button Styles */
+button, #addTaskBtn, #logoutBtn {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#addTaskBtn {
+    margin-bottom: 50px;
+}
+
+button:hover, #addTaskBtn:hover, #logoutBtn:hover {
+    background: #0056b3;
+}
+
+button:focus, #addTaskBtn:focus, #logoutBtn:focus {
+    outline: 2px solid #0056b3;
+}
+
+/* Task List Styles */
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#taskList li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Completed Task Styles */
+.task-text.complete {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Logout Button Alignment */
+.logout {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.task-text.complete {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    body {
+        margin: 20px 0;
+    }
+
+    .container, .task-manager {
+        width: 90%;
+        padding: 15px;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+        width: calc(100% - 20px); /* Adjust for narrower screens */
+        font-size: 14px;
+    }
+
+    button, #addTaskBtn, #logoutBtn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    #taskList li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
